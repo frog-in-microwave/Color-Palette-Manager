@@ -1,0 +1,258 @@
+/* The `*` selector in CSS targets all elements on the page, and the properties within this rule are
+setting the following styles for all elements:
+- `margin: 0;`: Sets the margin of all elements to 0, removing any default margin that may be
+applied by the browser.
+- `padding: 0;`: Sets the padding of all elements to 0, removing any default padding that may be
+applied by the browser.
+- `box-sizing: border-box;`: Sets the box-sizing property of all elements to border-box. This
+ensures that the width and height of an element include the padding and border, rather than adding
+it to the dimensions of the element.
+- `font-family: 'Arial', sans-serif;`: Sets the font family for all elements to 'Arial', with a
+fallback to a generic sans-serif font if Arial is not available. This helps maintain consistency in
+the font style across the page. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --primary-color: #ff4d4d;
+    --background-color: rgba(255, 255, 255, 0.9);
+    --input-background-color: rgb(255, 255, 255);
+    --color-input-border-color: rgba(0, 0, 0, 0);
+    --opposite-mode-color: rgb(0, 0, 0);
+    --opposite-mode-text-color: rgb(255, 255, 255);
+    --input-placeholder-color: rgba(0, 0, 0, 0.5);
+    --input-text-color: rgb(0, 0, 0);
+    --text-color: rgb(0, 0, 0);
+    --hover-color: rgba(0, 0, 0 , 0.7);
+    --hover-text-color: rgb(255, 255, 255);
+    --palette-box-color: rgb(255, 255, 255);
+    --delete-button-border-color: rgb(255, 0, 0);
+    --mode: light;
+}
+
+/* The `body` selector in the CSS code is styling the `body` element of the HTML document. Here's a
+breakdown of what each property within this rule is doing: */
+body {
+    height: 100vh;
+    background: url("images/colorful_paint_splatter-wallpaper-3360x1260.jpg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The `main` selector in the CSS code is targeting the `<main>` element in the HTML document. The
+properties within this rule are styling the `<main>` element as follows: */
+main {
+    width: 90%;
+    max-width: 600px;
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 5px solid var(--primary-color);
+}
+
+/* The `h1` selector in the CSS code is targeting all `<h1>` elements in the HTML document. The
+properties within this rule are styling the `<h1>` elements as follows:
+- `text-align: center;`: This property centers the text content of the `<h1>` element horizontally
+within its containing element.
+- `color: #333;`: This property sets the text color of the `<h1>` element to a dark gray color with
+the hex code `#333`.
+- `margin-bottom: 20px;`: This property adds a bottom margin of `20px` to the `<h1>` element,
+creating space between the `<h1>` element and the content below it.
+- `font-size: 2rem;`: This property sets the font size of the text within the `<h1>` element to
+`2rem`, which is relative to the root font size of the document. */
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-family: Playwrite IN;
+}
+
+/* The `#control_section` CSS rule is styling an element with the ID of "control_section". Here's a
+breakdown of what each property within this rule is doing: */
+#control_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The `#inputs` CSS rule is styling an element with the ID of "inputs". Here's a breakdown of what
+each property within this rule is doing: */
+#inputs {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* The `#palette_name` CSS rule is styling an element with the ID of "palette_name". Here's a breakdown
+of what each property within this rule is doing: */
+#palette_name {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--input-background-color);
+    color: var(--input-text-color);
+}
+
+#palette_name::placeholder {
+    color: var(--input-placeholder-color);
+}
+
+#error_section {
+    color: #ff0000;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+/* The `#color_inputs_holder` CSS rule is styling an element with the ID of "color_inputs_holder". It
+sets the display property to flex, which allows the child elements to be laid out in a flex
+container. The `justify-content: space-between;` property aligns the child elements along the main
+axis with space distributed between them, pushing the first element to the start and the last
+element to the end of the container. This creates space between the input elements within the
+`#color_inputs_holder` element. */
+#color_inputs_holder {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* The `#color_inputs_holder input[type="color"]` CSS rule is targeting input elements of type "color"
+that are within an element with the ID of "color_inputs_holder". Here's a breakdown of what each
+property within this rule is doing: */
+#color_inputs_holder input[type="color"] {
+    width: 30%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border: 2px solid var(--color-input-border-color);
+}
+
+/* The `#buttons` CSS rule is styling an element with the ID of "buttons". Here's a breakdown of what
+each property within this rule is doing: */
+#buttons {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* The `#save_button` CSS rule is styling a button element with the ID of "save_button". Here's a
+breakdown of what each property within this rule is doing: */
+#save_button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+#change_mode {
+    
+    background-color: var(--opposite-mode-color);
+    color: var(--opposite-mode-text-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+#change_mode:hover {
+    background-color: var(--hover-color);
+    color: var(--hover-text-color);
+}
+
+
+/* The `#save_button:hover` CSS rule is defining the styles that will be applied to the save button
+when a user hovers over it with their cursor. Specifically, it changes the background color of the
+save button to `#45a049` when the user hovers over it. This creates a visual feedback effect to
+indicate to the user that the button is interactive and can be clicked. The transition property
+`transition: background-color 0.3s;` specifies that the background color change will have a smooth
+transition over a duration of 0.3 seconds, adding a polished look to the hover effect. */
+
+#save_button:hover {
+    background-color: #45a049;
+}
+
+/* The `#saved_palettes_section` selector in the CSS code is targeting an HTML element with the ID of
+"saved_palettes_section" and applying a `margin-top` of `20px` to it. This CSS rule adds a top
+margin of `20px` to the element with the ID "saved_palettes_section", pushing it down from the
+elements above it on the page. This styling helps in creating space and improving the layout of the
+section with the ID "saved_palettes_section" within the overall design of the webpage. */
+#saved_palettes_section {
+    margin-top: 20px;
+}
+
+/* The `.palette_box` CSS class is styling elements with the class name "palette_box". Here's what each
+property within this class is doing: */
+.palette_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--palette-box-color);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* The `.palette_details` CSS class is styling elements with the class name "palette_details". It is
+using Flexbox properties to align the items within elements with this class horizontally. The
+`display: flex;` property makes the items inside the element behave like flex items, and
+`align-items: center;` centers those items vertically within the container. This styling ensures
+that the content within elements with the class "palette_details" is aligned nicely in a horizontal
+manner with centered vertical alignment. */
+.palette_details {
+    display: flex;
+    align-items: center;
+}
+
+/* The `.color_sample` CSS class is styling elements with the class name "color_sample". It is defining
+the following styles for elements with this class: */
+.color_sample {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* The `.palette_name` CSS class is styling elements with the class name "palette_name". */
+.palette_name {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+/* The `.delete_button` CSS class is defining the styles for a button element with the class name
+"delete_button". Here's what each property is doing: */
+.delete_button {
+    background-color: var(--primary-color);;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: 1px solid var(--delete-button-border-color);
+}
+
+/* The `.delete_button:hover` selector in the CSS code is defining the styles that will be applied to
+the delete button when it is being hovered over by the user. Specifically, it changes the background
+color of the delete button to `#e60000` when the user hovers over it. This creates a visual feedback
+effect to indicate to the user that the button is interactive. */
+.delete_button:hover {
+    background-color: #e60000;
+}

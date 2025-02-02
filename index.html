@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palette Picker</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- The code you provided is adding a link to an external CSS file named "style.css" using the `<link>` element. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+  </head>
+<body>
+
+  <main>
+    <!-- The code you provided is creating a section with the id "title_section" that contains an
+  `<h1>` heading element with the text "COLOR PALETTE GENERATOR". This section is likely
+  intended to display the title or heading for the color palette generator application or
+  webpage. -->
+  
+    <section id="title_section">
+      <h1>COLOR PALETTE MANAGER</h1>
+    </section>
+
+
+    <!-- The code you provided is creating a section with the id "control_section" that contains two
+    nested sections. -->
+    <section id="control_section">
+        
+    <!-- The code you provided is creating a section with the id "inputs"
+    that contains input elements for creating a color palette. -->
+
+
+
+
+      <h3 id="error_section"></h3>
+      <section id="inputs">
+        <input type="text" id="palette_name" placeholder="Input Your Palette Name" required>
+        <div id="color_inputs_holder">
+          <input type="color" id="color1">
+          <input type="color" id="color2">
+          <input type="color" id="color3">
+          
+        </div>
+      </section>
+
+
+
+
+
+    <!-- The code you provided is creating a section with the id "buttons" that contains a button element
+    with the id "save_button" and the text "Save Palette". This button is likely intended to trigger an
+    action to save the color palette created by the user. When clicked, it may execute a function in the
+    JavaScript code (referenced by the script.js file) that handles the saving functionality, such as
+    storing the palette data or displaying a confirmation message. -->
+
+      <section id="buttons">
+        <button id="change_mode">Dark Mode</button>
+        <button id="save_button">Save Palette</button>
+      </section>
+    </section>
+    <!-- The `<section id="saved_palettes_section">` is creating a section in the HTML document with the id
+    "saved_palettes_section". This section is likely intended to display or hold the saved color
+    palettes created by the user. It appears to be a placeholder where dynamically generated content,
+    such as saved color palettes, can be added or displayed through JavaScript manipulation. -->
+
+    <section id="saved_palettes_section">
+    </section>
+    
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
